@@ -23,7 +23,7 @@ public class Person {
         this.name = name;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
