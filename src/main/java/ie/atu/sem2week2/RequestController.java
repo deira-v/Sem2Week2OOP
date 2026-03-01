@@ -31,11 +31,19 @@ public class RequestController {
         return person;
     }
 
-    @GetMapping("/calculate/{operation}")
-    public String getOperation(@PathVariable String operation)
-    {
-        return "Operation: " + operation;
+    @GetMapping("/add")
+    public int add(@RequestParam int a, @RequestParam int b){
+        Calculate calculate = new Calculate();
+        int result = Calculate.add(a, b);
+        return result;
     }
+
+//    @GetMapping("/calculate/{operation}")
+//    public String getOperation(@PathVariable String operation)
+//    {
+//        Calculate calculate = new Calculate(3, 4);
+//        return Calculate.add();
+//    }
 
 
 }
